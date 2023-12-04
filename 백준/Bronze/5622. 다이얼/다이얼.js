@@ -13,10 +13,7 @@ function solution(input) {
     }
     for(let i = 0; i < DIAL.length; i++) {
         for(let j = 2; j <= 9; j++) {
-            if(PHONE_NUMBER[j].includes(DIAL[i])) {
-                sum += j + 1;
-                break;
-            }
+            sum += PHONE_NUMBER[j].includes(DIAL[i]) ? j + 1 : null;
         }
     }
     console.log(sum);
