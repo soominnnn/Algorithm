@@ -1,11 +1,6 @@
 function solution(intStrs, k, s, l) {
-    const resultArray = [];
+    const array = intStrs.map(el => Number(el.slice(s, s + l)));
+    const result = array.filter(el => el > k);
     
-    for(let i = 0; i < intStrs.length; i++) {
-        const strToInt = Number(intStrs[i].slice(s, l + s));
-        
-        if (strToInt > k) resultArray.push(strToInt);
-    }
-    
-    return resultArray;
+    return result;
 }
